@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <form class="search-bar" action="/" method="post">
+       
+<input id="cityInput" type="text" name="cityname" placeholder="Search for a City" autocomplete="off">
+<button type="submit" name="button">search</button>
+</form>
+    <div class="container">
+        <div class="current-info">
+
+            <div class="date-container">
+                <div class="time" id="time">
+                    <%= sendData.currenttime %> 
+                </div>
+                <div class="date" id="date">
+                    <%= sendData.todaydate %>
+                </div>
+
+                <div class="others" id="current-weather-items">
+                    <div class="weather-item">
+                        <div>Temperature : <%= sendData.temp %> &#176; C</div>
+                        
+                    </div>
+                    <div class="weather-item">
+                        <div>Humidity :  <%= sendData.humidity %>   %</div>
+                        
+                    </div>
+                    <div class="weather-item">
+                        <div>Pressure : <%= sendData.pressure %> hPa</div>
+                        
+                    </div>
+                    <div class="weather-item">
+                        <div>Wind Speed : <%= sendData.speed %> m/s</div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+         
+
+
+            <div class="place-container">
+                <div class="time-zone" id="time-zone"><%= sendData.location %></div>
+                <div id="country" class="country"><%= sendData.country %></div>
+            </div>
+        </div>
+       
+        
+    </div>
+ 
+   
+
+<div class="future-forecast">
+    <div class="today" id="current-temp">
+        <img src="<%= sendData.imageurl %>" alt="weather icon" class="w-icon">
+        <div class="other">
+            <div class="day"><%= sendData.day %></div>
+            <div class="temp">Min_Temp : <%= sendData.Min_Temp %>&#176; C</div>
+            <div class="temp">Max_Temp : <%= sendData.Max_Temp %>&#176; C</div>
+        </div>
+    </div>
+
+    <div class="weather-forecast" id="weather-forecast">
+        <div class="weather-forecast-item">
+            <div class="day"><%= sendData.day1 %></div>
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - <%= sendData.Min_Temp-2 %>&#176; C</div>
+            <div class="temp">Day - <%= sendData.Max_Temp +5 %>&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day"><%= sendData.day2 %></div>
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - <%= sendData.Min_Temp-3 %>&#176; C</div>
+            <div class="temp">Day - <%= sendData.Max_Temp +3%>&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day"><%= sendData.day3 %></div>
+            <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - <%= sendData.Min_Temp-1 %>&#176; C</div>
+            <div class="temp">Day - <%= sendData.Max_Temp +5 %>&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day"><%= sendData.day4 %></div>
+            <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - <%= sendData.Min_Temp- 3 %>&#176; C</div>
+            <div class="temp">Day - <%= sendData.Max_Temp + 5%>&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day"><%= sendData.day5 %></div>
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - <%= sendData.Min_Temp-3 %>&#176; C</div>
+            <div class="temp">Day - <%= sendData.Max_Temp +4 %>&#176; C</div>
+        </div>
+        <div class="weather-forecast-item">
+            <div class="day"><%= sendData.day6 %></div>
+            <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="weather icon" class="w-icon">
+            <div class="temp">Night - <%= sendData.Min_Temp-1 %>&#176; C</div>
+            <div class="temp">Day - <%= sendData.Max_Temp +3 %>&#176; C</div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
