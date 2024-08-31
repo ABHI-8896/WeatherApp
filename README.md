@@ -100,6 +100,13 @@ This structure and setup make it easy to manage server-side logic, API calls, an
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## IMAGES 
+![Screenshot 2024-08-31 125320](https://github.com/user-attachments/assets/bea567c1-c1ee-4ede-8b57-45928542435e)
+![Screenshot 2024-08-31 125249](https://github.com/user-attachments/assets/38c978c2-122e-4d82-9b3d-74d8c99e112d)
+![Screenshot 2024-08-31 125356](https://github.com/user-attachments/assets/3aedf900-254e-4600-9f1e-c9b0224efad1)
+
+
+
 
 
 
